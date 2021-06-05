@@ -12,7 +12,6 @@ const Form = ({ currentId, setCurrentId }) => {
   );
 
   const [postData, setPostData] = useState({
-    creator: "",
     title: "",
     message: "",
     tags: "",
@@ -38,7 +37,6 @@ const Form = ({ currentId, setCurrentId }) => {
   const clear = () => {
     setCurrentId(null);
     setPostData({
-      creator: "",
       title: "",
       message: "",
       tags: "",
@@ -56,21 +54,6 @@ const Form = ({ currentId, setCurrentId }) => {
         <Typography variant="h6">
           {currentId ? "Editing" : "Creating"} a Memory
         </Typography>
-        <TextField
-          name="creator"
-          variant="outlined"
-          label="Creator"
-          margin="normal"
-          required
-          fullWidth
-          value={postData.creator}
-          onChange={(e) =>
-            setPostData({
-              ...postData,
-              creator: e.target.value,
-            })
-          }
-        />
         <TextField
           name="title"
           variant="outlined"
