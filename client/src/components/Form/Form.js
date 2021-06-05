@@ -24,7 +24,7 @@ const Form = ({ currentId, setCurrentId }) => {
   });
   const classes = useStyles();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (currentId === 0) {
